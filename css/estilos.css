@@ -1,0 +1,8 @@
+body {
+  font-size: 20px; }
+
+#formulario {
+  list-style-type: none;
+  color: blueviolet;
+  font: oblique 120% cursive;
+  font-weight: bold; }

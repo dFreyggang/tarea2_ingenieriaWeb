@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Bootstrap CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+        <!--Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!--CSS-->
+        <link href="css/estilos.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div id="mensaje"></div>
+            <form id=formulario class="row g-3 needs-validation" novalidate>
+                <ul>
+                    <li>
+                        <label for="nombreCompleto" class="form-label">Nombre</label><br>
+                        <input type="text" class="form-control" id="nombreCompleto" placeholder="Ingrese su nombre completo" required>    
+                        <div class="valid-feedback">Nombre en formato valido</div>
+                        <div class="invalid-feedback">Debe ingresar su nombre completo</div>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="rut" class="form-label">RUT</label><br>
+                        <input type="text" class="form-control" id="rut" placeholder="Ingrese su rut con digito verificador y sin puntos ni guion" maxlength="9" pattern="[0-9]{7,8}[0-9Kk]{1}" required>    
+                        <div class="valid-feedback">Rut en formato valido</div>
+                        <div class="invalid-feedback">Debe ingresar su rut en el formato solicitado</div>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="email" class="form-label">Email</label><br>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su direccion email" required>
+                        <div class="valid-feedback">Mail en formato valido</div>
+                        <div class="invalid-feedback">Debe ingresar su mail en formato adecuado</div>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="telefono" class="form-label">Telefono</label><br>
+                        <input type="text" class="form-control" id="telefono" maxlength="9" placeholder="Ingrese su numero de telefono movil" maxlength="9" pattern="[0-9]{9}" required>   
+                        <div class="valid-feedback">Numero valido</div>
+                        <div class="invalid-feedback">Debe ingresar su telefono celular</div>
+                    </li>
+                    <br>
+                    <li id="lenguajesDeInteres">
+                        <label class="form-label">Selecione uno o mas lenguajes de programacion que sean de su interes:</label><br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres1"> Python<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres2"> TypeScrypt<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres3"> C++<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres4"> C#<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres5"> PHP<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres6"> Ruby on Rails<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres7"> Java<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres8"> R<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres9"> Groovy<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres10"> Go<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres11"> Swift<br>
+                        <input type="checkbox" class="form-check-input" id="lenguajesDeInteres12"> Kotlin<br>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="nivelGeneral" class="form-label">Segun su criterio: ¿Cual es su nivel de experiencia general en programacion?</label><br>
+                        <input type="radio" class="form-check-input" id="nivelGeneral1" name="nivelExperienciaProgramacion" value="bajo" required>Bajo <br>
+                        <input type="radio" class="form-check-input" id="nivelGeneral2" name="nivelExperienciaProgramacion" value="medio" required>Medio<br>
+                        <input type="radio" class="form-check-input" id="nivelGeneral3" name="nivelExperienciaProgramacion" value="alto" required>Alto<br>
+                        <div class="valid-feedback">Nivel de experiencia valido</div>
+                        <div class="invalid-feedback">Debe ingresar su nivel de experiencia</div>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="nivelEspecifico" class="form-label">De los siguientes lenguajes de programacion, determine su nivel de conocimiento:</label><br>
+                        Python <input type="range" class="form-range" id="nivelEspecifico1" min="0" max="10" required><br>
+                        Java <input type="range" class="form-range" id="nivelEspecifico2" min="0" max="10" required><br>
+                        C++ <input type="range" class="form-range" id="nivelEspecifico3" min="0" max="10" required><br>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="cursosTomados" class="form-label">En caso de haber tomado alguno de estos cursos, seleccione cual o cuales de ellos le ha tomado mayor dificultad</label><br>
+                        <input type="checkbox" class="form-check-input" id="cursosTomados1"> Estructura de Datos<br>
+                        <input type="checkbox" class="form-check-input" id="cursosTomados2"> Inteligencia Artificial<br>
+                        <input type="checkbox" class="form-check-input" id="cursosTomados3"> Interaccion Humano-Computador<br>
+                        <input type="checkbox" class="form-check-input" id="cursosTomados4"> Sistemas Operativos<br>
+                        Otro <input type="text" class="form-input" id="cursosTomados5"><br>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="opinion" class="form-label">Queremos conocer su opinion acerca de la escuela</label>
+                        <textarea class="form-control" id="opinion" maxlength="500" rows="5" required></textarea>
+                        <div class="valid-feedback">Gracias por compartir su opinion</div>
+                        <div class="invalid-feedback">Por favor, cuentenos su opinion sobre la escuela</div>
+                    </li>
+                    <br>
+                    <li>
+                        <button class="btn btn-primary" id="submit" type="submit">Enviar</button>
+                        <button class="btn btn-primary" id="reset" type="reset">Cancelar</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <script data-main="js/inicio.js" src="js/require-jquery.js"></script>
+    </body>
+</html>

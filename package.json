@@ -1,0 +1,20 @@
+{
+  "name": "tarea2",
+  "version": "1.0.0",
+  "description": "Descripcion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "build-css": "node-sass --recursive --output css scss"
+  },
+  "author": "Dexter Freyggang",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.6"
+  }
+}
